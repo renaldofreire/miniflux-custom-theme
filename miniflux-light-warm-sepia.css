@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+/* Cores do Tema Claro Otimizado (Sépia/Amarelo Pastel) */
+:root {
+  color-scheme: light;
+  --body-background: #F9F4EC;
+  --body-color: #2D2926;
+  --link-color: #8A4B14;
+  --link-hover-color: #6E390E;
+  --entry-content-color: #2D2926;
+  --panel-background: #F0E6D8;
+  --panel-border-color: #E2D4C1;
+  --input-background: #FAF6EF;
+  --input-color: #2D2926;
+  --input-border: #D8C8B0;
+}
+
+/* Remove a cor verde chamativa das caixas de categoria/itens */
+.category-has-unread,
+.feed-has-unread,
+.item {
+  background-color: #F0E6D8 !important;
+  border-color: #E2D4C1 !important;
+}
+
+/* Suaviza mensagens de alerta/sem registros */
+p.alert,
+.alert {
+  background-color: #F0E6D8 !important;
+  color: #7A6F62 !important;
+  border: 1px solid #E2D4C1 !important;
+  box-shadow: none !important;
+}
+
+/* Fonte Lora nos posts */
+.entry-content,
+.entry-title,
+.entry-header h1 {
+  font-family: 'Lora', Georgia, serif !important;
+}
+
+/* Desativa o efeito de destaque/hover em tabelas e newsletters */
+.entry-content table tr:hover,
+.entry-content table tbody tr:hover,
+.entry-content tr:hover,
+.entry-content tr:hover td {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
+/* ==========================================================================
+   Limpeza e Normalização de HTML de Newsletters (Kill The Newsletter)
+   ========================================================================== */
+
+/* Suaviza/limpa tabelas rígidas de layouts de e-mail */
+.entry-content table {
+  background-color: transparent !important;
+  border-collapse: collapse !important;
+  border: none !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.entry-content td,
+.entry-content th {
+  border: none !important;
+  background-color: transparent !important;
+  color: inherit !important;
+  padding: 4px 0 !important;
+}
+
+/* Remove linhas horizontais e divisores chamativos de e-mails */
+.entry-content hr {
+  border: 0 !important;
+  border-top: 1px solid #E2D4C1 !important;
+  margin: 1.5em 0 !important;
+}
+
+/* Força neutralidade de estilos inline de fundo em e-mails (como background #fff) */
+.entry-content [style*="background"],
+.entry-content div,
+.entry-content span,
+.entry-content p {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
+/* Mantém os links legíveis dentro do conteúdo de newsletters */
+.entry-content a {
+  color: #8A4B14 !important;
+}
+
+.entry-content a:hover {
+  color: #6E390E !important;
+}
